@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier . --write"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.12.2",
     "dotenv": "^17.2.3",
     "next": "^15.5.5",
@@ -22,6 +24,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.6.2",
     "typescript": "^5"
   }
 }

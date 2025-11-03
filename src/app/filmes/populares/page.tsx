@@ -5,16 +5,14 @@ import { getPopularMovies } from "@/lib/api/tmbd";
 export const revalidate = 60;
 
 const filmesPopulares = async () => {
+  const filmes = await getPopularMovies();
 
-    const filmes = await getPopularMovies();
-
-    return (
-        <>
-            <Title title="Filmes Populares" />
-            <Grid filmes={filmes} />
-        </>
-    )
-
-    }
+  return (
+    <>
+      <Title title="Filmes Populares" />
+      <Grid filmes={filmes} />
+    </>
+  );
+};
 
 export default filmesPopulares;
