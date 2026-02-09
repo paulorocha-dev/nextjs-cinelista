@@ -1,6 +1,6 @@
 import Grid from "@/app/components/Grid";
 import Title from "@/app/components/Title";
-import { getNowPlaying } from "@/lib/api/tmbd";
+import { getNowPlaying } from "@/lib/api/tmdb";
 
 export const dynamic = "force-dynamic";
 

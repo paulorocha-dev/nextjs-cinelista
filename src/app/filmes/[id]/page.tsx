@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "./DetalheFilme.module.css";
-import { getMovieDetails } from "@/lib/api/tmbd";
+import { getMovieDetails } from "@/lib/api/tmdb";
 import Image from "next/image";
 
 type Props = {
@@ -52,6 +52,8 @@ const DetalheFilme = async ({ params }: Props) => {
                 className={styles.detalhes_image}
                 src={`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${poster_path}`}
                 alt={`Poster do filme ${title}`}
+                width={300}
+                height={450}
               />
             </figure>
             <article className={styles.detalhes_info}>

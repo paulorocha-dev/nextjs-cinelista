@@ -1,6 +1,6 @@
 import Grid from "@/app/components/Grid";
 import Title from "@/app/components/Title";
-import { getPopularMovies } from "@/lib/api/tmbd";
+import { getPopularMovies } from "@/lib/api/tmdb";
 
 export const revalidate = 60;
 

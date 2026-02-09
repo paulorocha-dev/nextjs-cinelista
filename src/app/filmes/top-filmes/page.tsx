@@ -1,6 +1,6 @@
 import Grid from "@/app/components/Grid";
 import Title from "@/app/components/Title";
-import { getTopMovies } from "@/lib/api/tmbd";
+import { getTopMovies } from "@/lib/api/tmdb";
 
 export const dynamic = "force-static";
 
