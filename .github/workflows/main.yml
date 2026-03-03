@@ -50,13 +50,13 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Instalação das dependências
-        run: npm install
-          
+        run: npm ci
+      
       - name: Rodar lint
-        run: npm run lint
-        
+        run: npx next lint --dir .
+      
       - name: Verificar formatação
-        run: npm run format -- --check
-
+        run: npx prettier . --check
+      
       - name: Rodar testes
         run: npm run test
