@@ -26,7 +26,9 @@ export const getNowPlaying = async () => {
 };
 
 export const getPopularMovies = async () => {
-  const res = await tmdbApi.get<Data>("/movie/popular?language=pt-BR");
+  const res = await tmdbApi.get<Data>("/movie/popular", {
+    params: { language: "pt-BR", page: 1 },
+  });
 
   return res.data.results;
 };
