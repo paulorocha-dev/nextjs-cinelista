@@ -9,10 +9,11 @@ type Props = {
 const Grid = ({ filmes }: Props) => {
   return (
     <section className={styles.grid}>
-      {filmes.map((filme) => (
-        <Card key={filme.id} filme={filme} />
+      {filmes.map((filme, index) => (
+        <Card key={filme.id} filme={filme} priority={index === 0} />
       ))}
     </section>
   );
 };
+
 export default Grid;

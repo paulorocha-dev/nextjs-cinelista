@@ -4,14 +4,16 @@ import Title from "./components/Title";
 
 export default async function Home() {
   const filmes = await getTrendingMovies();
+
   return (
-    <>
+    <main>
       <Title title="Filmes em Destaque" />
+
       {filmes && filmes.length > 0 ? (
         <Grid filmes={filmes} />
       ) : (
         <p>Nenhum filme encontrado.</p>
       )}
-    </>
+    </main>
   );
 }
